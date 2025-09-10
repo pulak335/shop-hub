@@ -1,211 +1,152 @@
 # E-Commerce Platform
 
-A modern, full-featured e-commerce platform built with Next.js, TypeScript, Tailwind CSS, and Redux Toolkit.
+A full-stack e-commerce application built with Next.js, Redux, Node.js, Express, and MongoDB.
 
-## 🚀 Features
+## Features
 
-### Account Management
-- Customer registration with email, phone, or social login
-- Secure login/logout functionality
-- Profile management (personal details, addresses, password)
-- Multiple delivery address management
-- Account deactivation/deletion options
+- User authentication with JWT
+- Product browsing and searching
+- Shopping cart and wishlist functionality
+- Order management
+- Admin dashboard
+- Responsive design
 
-### Browsing & Navigation
-- Browse products by main categories (3-6) and subcategories
-- View detailed product information (name, description, price, stock, reviews, images)
-- Navigate through featured products, new arrivals, and best sellers
+## Tech Stack
 
-### Search & Filtering
-- Search products by keyword, SKU, or brand
-- Advanced filtering options:
-  - Price range
-  - Category
-  - Brand
-  - Rating
-- Sort results by newest, price (low-high/high-low), or popularity
+### Frontend
+- Next.js
+- Redux Toolkit
+- Tailwind CSS
+- Axios
 
-### Shopping Cart & Wishlist
-- Add products to cart with quantity management
-- Update product quantities or remove items
-- Add products to wishlist for future purchase
-- Move items between wishlist and cart
+### Backend
+- Node.js
+- Express
+- MongoDB with Mongoose
+- JWT Authentication
 
-### Checkout & Payment
-- Select delivery address and shipping method
-- Apply discount codes and vouchers
-- Multiple payment methods (card, mobile banking, COD)
-- Order summary review before confirmation
-- Email/SMS order confirmation
-
-### Order Tracking & History
-- Real-time order status updates (Processing, Shipped, Delivered, Cancelled)
-- Shipment tracking with courier details
-- Order history with downloadable invoices
-
-### Reviews & Ratings
-- Rate purchased products (1-5 stars)
-- Write detailed product reviews with optional images
-- Edit or delete own reviews
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui + Radix UI
-- **State Management**: Redux Toolkit
-- **API Handling**: Axios
-- **Icons**: Lucide React
-- **Image Optimization**: Next.js Image
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                    # Next.js App Router
-│   ├── api/               # API routes
-│   │   ├── products/      # Products API
-│   │   └── placeholder/   # Image placeholder API
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # React components
-│   ├── sections/          # Page sections
-│   │   ├── HeroSection.tsx
-│   │   ├── FeaturedProducts.tsx
-│   │   ├── CategoryGrid.tsx
-│   │   ├── NewArrivals.tsx
-│   │   └── BestSellers.tsx
-│   ├── ui/                # UI components
-│   │   ├── ProductCard.tsx
-│   │   └── LoadingSpinner.tsx
-│   └── providers.tsx      # Redux provider
-├── hooks/                 # Custom hooks
-│   └── useProducts.ts     # Products data hook
-├── store/                 # Redux store
-│   ├── slices/            # Redux slices
-│   │   ├── authSlice.ts   # Authentication
-│   │   ├── cartSlice.ts   # Shopping cart
-│   │   ├── wishlistSlice.ts # Wishlist
-│   │   ├── productSlice.ts # Products
-│   │   └── orderSlice.ts  # Orders
-│   ├── hooks.ts           # Typed Redux hooks
-│   └── store.ts           # Store configuration
-└── lib/                   # Utility functions
-    └── utils.ts           # shadcn/ui utilities
-```
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js (v14 or higher)
 - npm or yarn
+- MongoDB Atlas account or local MongoDB installation
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository
 ```bash
 git clone <repository-url>
 cd ecommerce-app
 ```
 
-2. Install dependencies:
+2. Install frontend dependencies
 ```bash
 npm install
 ```
 
-3. Run the development server:
+3. Install backend dependencies
 ```bash
+cd backend
+npm install
+cd ..
+```
+
+4. Set up environment variables
+   - Create a `.env` file in the `backend` directory with the following variables:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   PORT=5000
+   JWT_SECRET=your_jwt_secret_key
+   JWT_EXPIRE=7d
+   NODE_ENV=development
+   ```
+   
+   - Create a `.env.local` file in the root directory with the following variables:
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:5000/api
+   ```
+
+5. Run the development server
+```bash
+# Run both frontend and backend
+npm run dev:all
+
+# Run frontend only
 npm run dev
+
+# Run backend only
+npm run server
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## API Endpoints
 
-### Build for Production
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/logout` - Logout user
+- `GET /api/auth/me` - Get current user
 
-```bash
-npm run build
-npm start
+### Products
+- `GET /api/products` - Get all products
+- `GET /api/products/:id` - Get single product
+- `POST /api/products` - Create new product (Admin)
+- `PUT /api/products/:id` - Update product (Admin)
+- `DELETE /api/products/:id` - Delete product (Admin)
+- `GET /api/products/featured` - Get featured products
+- `GET /api/products/new-arrivals` - Get new arrivals
+- `GET /api/products/best-sellers` - Get best sellers
+- `GET /api/products/on-sale` - Get products on sale
+
+### Categories
+- `GET /api/categories` - Get all categories
+- `GET /api/categories/:id` - Get single category
+- `POST /api/categories` - Create new category (Admin)
+- `PUT /api/categories/:id` - Update category (Admin)
+- `DELETE /api/categories/:id` - Delete category (Admin)
+- `GET /api/categories/hierarchy` - Get category hierarchy
+
+### Orders
+- `GET /api/orders` - Get all orders (Admin)
+- `GET /api/orders/myorders` - Get user orders
+- `GET /api/orders/:id` - Get single order
+- `POST /api/orders` - Create new order
+- `PUT /api/orders/:id/status` - Update order status (Admin)
+- `PUT /api/orders/:id/pay` - Update order to paid
+- `DELETE /api/orders/:id` - Delete order (Admin)
+- `GET /api/orders/stats` - Get order stats (Admin)
+
+### Users
+- `GET /api/users` - Get all users (Admin)
+- `GET /api/users/:id` - Get single user (Admin)
+- `POST /api/users` - Create user (Admin)
+- `PUT /api/users/:id` - Update user (Admin)
+- `DELETE /api/users/:id` - Delete user (Admin)
+- `PUT /api/users/profile` - Update user profile
+- `GET /api/users/stats` - Get user stats (Admin)
+
+## Folder Structure
+
+```
+ecommerce-app/
+├── backend/              # Backend API
+│   ├── config/           # Configuration files
+│   ├── controllers/      # API controllers
+│   ├── middleware/       # Custom middleware
+│   ├── models/           # Mongoose models
+│   ├── routes/           # API routes
+│   └── server.js         # Entry point
+├── public/               # Static assets
+├── src/
+│   ├── app/              # Next.js app router
+│   │   └── (main)/       # Main site pages
+│   ├── components/       # React components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   └── store/            # Redux store
+└── package.json
 ```
 
-## 🔧 Configuration
-
-### Environment Variables
-Create a `.env.local` file in the root directory:
-
-```env
-# API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:3000/api
-
-# Authentication (for future implementation)
-NEXTAUTH_SECRET=your-secret-key
-NEXTAUTH_URL=http://localhost:3000
-
-# Database (for future implementation)
-DATABASE_URL=your-database-url
-```
-
-## 📱 Features Implementation Status
-
-- [x] Project setup and structure
-- [x] Redux store configuration
-- [x] Product management system
-- [x] Shopping cart functionality
-- [x] Wishlist management
-- [x] Basic UI components
-- [x] Sample product data
-- [x] Responsive design
-- [ ] User authentication
-- [ ] Payment integration
-- [ ] Order management
-- [ ] Review system
-- [ ] Search functionality
-- [ ] Advanced filtering
-- [ ] Admin dashboard
-
-## 🎨 Customization
-
-### Styling
-The project uses Tailwind CSS for styling. You can customize the design by:
-- Modifying `tailwind.config.ts`
-- Updating color schemes in `globals.css`
-- Customizing component styles
-
-### Components
-All components are built with shadcn/ui and can be customized using:
-- CSS variables for theming
-- Component variants
-- Custom styling overrides
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue in the repository
-- Contact the development team
-- Check the documentation
-
-## 🔮 Roadmap
-
-- [ ] User authentication with NextAuth.js
-- [ ] Database integration (PostgreSQL/MongoDB)
-- [ ] Payment gateway integration (Stripe/PayPal)
-- [ ] Email notifications
-- [ ] Advanced search with Elasticsearch
-- [ ] Mobile app (React Native)
-- [ ] Multi-language support
-- [ ] Analytics dashboard
-- [ ] SEO optimization
-- [ ] Performance monitoring

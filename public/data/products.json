@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Premium quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
+    "price": 199.99,
+    "originalPrice": 249.99,
+    "category": "Electronics",
+    "subcategory": "Audio",
+    "brand": "SoundMax",
+    "image": "/images/products/headphones-1.jpg",
+    "images": [
+      "/images/products/headphones-1.jpg",
+      "/images/products/headphones-2.jpg",
+      "/images/products/headphones-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 45,
+    "rating": 4.5,
+    "reviewCount": 128,
+    "tags": ["wireless", "bluetooth", "noise-cancelling", "premium"],
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "discount": 20,
+    "specifications": {
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "250g",
+      "color": "Black"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and waterproof design. Track your health and fitness goals.",
+    "price": 299.99,
+    "originalPrice": 399.99,
+    "category": "Electronics",
+    "subcategory": "Wearables",
+    "brand": "FitTech",
+    "image": "/images/products/smartwatch-1.jpg",
+    "images": [
+      "/images/products/smartwatch-1.jpg",
+      "/images/products/smartwatch-2.jpg",
+      "/images/products/smartwatch-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 32,
+    "rating": 4.7,
+    "reviewCount": 89,
+    "tags": ["fitness", "smartwatch", "gps", "waterproof"],
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "discount": 25,
+    "specifications": {
+      "batteryLife": "7 days",
+      "waterRating": "IP68",
+      "display": "1.4 inch AMOLED",
+      "color": "Silver"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Organic Cotton T-Shirt",
+    "description": "Comfortable and sustainable organic cotton t-shirt. Available in multiple colors and sizes. Perfect for everyday wear.",
+    "price": 29.99,
+    "originalPrice": 39.99,
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "brand": "EcoWear",
+    "image": "/images/products/tshirt-1.jpg",
+    "images": [
+      "/images/products/tshirt-1.jpg",
+      "/images/products/tshirt-2.jpg",
+      "/images/products/tshirt-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 120,
+    "rating": 4.3,
+    "reviewCount": 256,
+    "tags": ["organic", "cotton", "sustainable", "casual"],
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "discount": 25,
+    "specifications": {
+      "material": "100% Organic Cotton",
+      "fit": "Regular",
+      "care": "Machine washable",
+      "color": "Navy Blue"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Professional Camera Lens",
+    "description": "High-quality 50mm prime lens for professional photography. Sharp images with beautiful bokeh effect.",
+    "price": 899.99,
+    "originalPrice": 999.99,
+    "category": "Electronics",
+    "subcategory": "Photography",
+    "brand": "LensMaster",
+    "image": "/images/products/lens-1.jpg",
+    "images": [
+      "/images/products/lens-1.jpg",
+      "/images/products/lens-2.jpg",
+      "/images/products/lens-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 15,
+    "rating": 4.8,
+    "reviewCount": 67,
+    "tags": ["photography", "lens", "professional", "prime"],
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "discount": 10,
+    "specifications": {
+      "focalLength": "50mm",
+      "aperture": "f/1.4",
+      "mount": "Canon EF",
+      "weight": "600g"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Ergonomic Office Chair",
+    "description": "Comfortable ergonomic office chair with lumbar support and adjustable height. Perfect for long working hours.",
+    "price": 449.99,
+    "originalPrice": 549.99,
+    "category": "Furniture",
+    "subcategory": "Office",
+    "brand": "ComfortPlus",
+    "image": "/images/products/chair-1.jpg",
+    "images": [
+      "/images/products/chair-1.jpg",
+      "/images/products/chair-2.jpg",
+      "/images/products/chair-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 28,
+    "rating": 4.6,
+    "reviewCount": 143,
+    "tags": ["ergonomic", "office", "comfortable", "adjustable"],
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "discount": 18,
+    "specifications": {
+      "material": "Mesh and Fabric",
+      "weightCapacity": "150kg",
+      "adjustableHeight": "Yes",
+      "color": "Black"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Wireless Gaming Mouse",
+    "description": "High-precision wireless gaming mouse with RGB lighting and programmable buttons. Perfect for competitive gaming.",
+    "price": 79.99,
+    "originalPrice": 99.99,
+    "category": "Electronics",
+    "subcategory": "Gaming",
+    "brand": "GamePro",
+    "image": "/images/products/mouse-1.jpg",
+    "images": [
+      "/images/products/mouse-1.jpg",
+      "/images/products/mouse-2.jpg",
+      "/images/products/mouse-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 67,
+    "rating": 4.4,
+    "reviewCount": 198,
+    "tags": ["gaming", "wireless", "rgb", "precision"],
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "discount": 20,
+    "specifications": {
+      "dpi": "16000",
+      "connectivity": "2.4GHz Wireless",
+      "batteryLife": "70 hours",
+      "color": "Black with RGB"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Stainless Steel Water Bottle",
+    "description": "Insulated stainless steel water bottle that keeps drinks cold for 24 hours or hot for 12 hours. Eco-friendly and durable.",
+    "price": 34.99,
+    "originalPrice": 44.99,
+    "category": "Home & Kitchen",
+    "subcategory": "Drinkware",
+    "brand": "HydroLife",
+    "image": "/images/products/bottle-1.jpg",
+    "images": [
+      "/images/products/bottle-1.jpg",
+      "/images/products/bottle-2.jpg",
+      "/images/products/bottle-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 89,
+    "rating": 4.5,
+    "reviewCount": 312,
+    "tags": ["insulated", "stainless-steel", "eco-friendly", "durable"],
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "discount": 22,
+    "specifications": {
+      "capacity": "750ml",
+      "material": "304 Stainless Steel",
+      "insulation": "Double Wall Vacuum",
+      "color": "Matte Black"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Yoga Mat Premium",
+    "description": "Non-slip premium yoga mat made from eco-friendly materials. Perfect for yoga, pilates, and fitness exercises.",
+    "price": 59.99,
+    "originalPrice": 79.99,
+    "category": "Sports & Fitness",
+    "subcategory": "Yoga",
+    "brand": "ZenFit",
+    "image": "/images/products/yogamat-1.jpg",
+    "images": [
+      "/images/products/yogamat-1.jpg",
+      "/images/products/yogamat-2.jpg",
+      "/images/products/yogamat-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 54,
+    "rating": 4.7,
+    "reviewCount": 87,
+    "tags": ["yoga", "non-slip", "eco-friendly", "premium"],
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "discount": 25,
+    "specifications": {
+      "thickness": "6mm",
+      "material": "TPE (Eco-friendly)",
+      "size": "183cm x 61cm",
+      "color": "Purple"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Bluetooth Portable Speaker",
+    "description": "Compact waterproof Bluetooth speaker with 360-degree sound. Perfect for outdoor adventures and parties.",
+    "price": 89.99,
+    "originalPrice": 119.99,
+    "category": "Electronics",
+    "subcategory": "Audio",
+    "brand": "SoundWave",
+    "image": "/images/products/speaker-1.jpg",
+    "images": [
+      "/images/products/speaker-1.jpg",
+      "/images/products/speaker-2.jpg",
+      "/images/products/speaker-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 73,
+    "rating": 4.3,
+    "reviewCount": 156,
+    "tags": ["bluetooth", "portable", "waterproof", "360-sound"],
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "discount": 25,
+    "specifications": {
+      "batteryLife": "12 hours",
+      "waterRating": "IPX7",
+      "connectivity": "Bluetooth 5.0",
+      "color": "Ocean Blue"
+    }
+  },
+  {
+    "id": 10,
+    "name": "LED Desk Lamp",
+    "description": "Adjustable LED desk lamp with touch control and USB charging port. Eye-friendly lighting for work and study.",
+    "price": 49.99,
+    "originalPrice": 69.99,
+    "category": "Home & Kitchen",
+    "subcategory": "Lighting",
+    "brand": "BrightLight",
+    "image": "/images/products/lamp-1.jpg",
+    "images": [
+      "/images/products/lamp-1.jpg",
+      "/images/products/lamp-2.jpg",
+      "/images/products/lamp-3.jpg"
+    ],
+    "inStock": true,
+    "stockQuantity": 41,
+    "rating": 4.4,
+    "reviewCount": 203,
+    "tags": ["led", "adjustable", "touch-control", "usb-charging"],
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "discount": 29,
+    "specifications": {
+      "powerConsumption": "12W",
+      "colorTemperature": "3000K-6500K",
+      "usbPort": "Yes",
+      "color": "White"
+    }
+  }
+]
